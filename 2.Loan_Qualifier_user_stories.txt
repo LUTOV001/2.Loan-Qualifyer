@@ -1,5 +1,5 @@
 2. UCB FinTech Bootcamp Module 2 Challenge : Loan Qualifier User stories
-** User stories are listed below in three separate sections, 1. Inputs, 2. Calculations,  3. Loan Selection/Filtering and 4. Output
+** User stories are listed below in four separate sections, 1. Inputs, 2. Calculations,  3. Loan Selection/Filtering and 4. Output
 
 ** 1. Inputs
 
