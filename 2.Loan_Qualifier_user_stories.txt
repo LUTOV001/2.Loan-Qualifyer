@@ -1,0 +1,50 @@
+2. UCB FinTech Bootcamp Module 2 Challenge : Loan Qualifier User stories
+** User stories are listed below in three separate sections, 1. Inputs, 2. Calculations,  3. Loan Selection/Filtering and 4. Output
+
+** 1. Inputs
+
+*** 1.1 As a lender, I want to provide the location (directory and file path) where the list of lending banks and their lending criteria is located so I can use to qualify available loans for the customer
+
+  *** Given that I need to compare against a specific bank list and criteria, if an invalid location is provided, the application shour return an invalid location/path message
+
+*** 1.2. As a lender, I want to capture financial information from the customer provided info -  Credit score, current amount of monthly debt, monthly income, desired loan amount, home value - to the application so it can be used to qualify available loans
+
+  *** Given that all these Inputs will be enteded manually, the application should be able to convert them to the correc format (integer, float) for Calculations and comparisons/qualifying
+
+** 2. Calculations
+
+*** 2.1 As a lender, I want to use the customer provided information to calculate the debt-to-income ratio and the loan-to-value retio so they can be used for loan qualifying purposes by comparing them vs. available loan critaria
+
+  *** Given that the list of of available banks and criteria includes these 2 ratios the application should be able to calculate them and save them in the right format (float) for comparison/qualifying purposes
+
+** 3. Loan Selection/Filtering
+
+*** 3.1. As a lender, I want to filter the bank list by comparing the customer's desired loan against the bank's maximum loan size so that we can know which banks offer the loan amount requested by the customer.
+
+  *** Given that I want to filter the bank list according to the customer's desired loan, when there are no banks that offer the loan amount request, then the application should return an empty list.
+
+*** 3.2 As a lender, I want to filter the bank list by comparing if the customer's credit score is equal to or greater than the minimum allowed credit score defined by the bank so that we can know which banks are willing to offer a loan to the customer.
+
+  * Given that I want to filter the bank list according to the customer's credit score, when there are no banks that accept the customer's credit score, then the application should return an empty list.
+
+*** 3.3 As a lender, I want to filter the bank list by comparing if the customer's debt-to-income is equal to or less than the maximum debt-to-income ratio allowed by the bank so that we can assess if the customer will have payment capacity according to the bank's criteria.
+
+  * Given that I want to filter the bank list according to the customer's debt-to-income ratio, when there are no banks that accept the customer's debt-to-income ratio, then the application should return an empty list.
+
+*** 3.4 As a lender, I want to filter the bank list by comparing if the customer's loan-to-value is equal to or less than the maximum loan-to-value ratio allowed by the bank so that we can assess if the customer's home value is worth enough as an asset to secure the loan.
+
+  * Given that I want to filter the bank list according to the customer's loan-to-value ratio, when there are no banks that accept the customer's loan-to-value ratio, then the application should return an empty list.
+
+** 4. Output
+
+*** 4.1 As a user, I want to be able to save the list of qualifying loans found to a csv file, so I can use it later (e.g. print, share, etc) 
+
+  *** Given that I’m using the loan qualifier CLI, when I run the qualifier, then the tool should prompt the user to save the results as a CSV file.
+
+  *** Given that no qualifying loans exist (e.g the qualifying criteria is not met), when prompting a user to save a file, then the program should notify the user and exit.
+
+  *** Given that I have a list of qualifying loans, when I’m prompted to save the results, then I should be able to opt out of saving the file.
+
+  *** Given that I have a list of qualifying loans, when I choose to save the loans, the tool should prompt for a file path to save the file.
+
+  *** Given that I’m using the loan qualifier CLI, when I choose to save the loans, then the tool should save the results as a CSV file.
