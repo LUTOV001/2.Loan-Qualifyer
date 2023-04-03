@@ -9,6 +9,8 @@ Example:
 import sys
 import fire
 import questionary
+import csv
+import os
 from pathlib import Path
 
 from qualifier.utils.fileio import load_csv
@@ -103,13 +105,39 @@ def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_valu
 
 
 def save_qualifying_loans(qualifying_loans):
-    """Saves the qualifying loans to a CSV file.
 
-    Args:
-        qualifying_loans (list of lists): The qualifying bank loans.
-    """
-    # @TODO: Complete the usability dialog for savings the CSV Files.
-    # YOUR CODE HERE!
+# """Saves the qualifying loans to a CSV file.
+# Args:
+# qualifying_loans (list of lists): The qualifying bank loans.
+#     """
+   # @TODO: Complete the usability dialog for savings the CSV Files.    
+
+    save_file = questionary.text("Do you want to save the list of qualified loans?(Yes/No)").ask()
+
+    if save_file =="Yes" :
+            out_dir = questionary.text("Enter the directory/folder where you want to save the file:").ask()
+            file_name = questionary.text("Enter a file name with extension .csv (e.g. qualified_loans.csv):").ask()
+            # csvpath = Path(out_dir)
+            if not os.path.exists(out_dir):
+                os.makedirs(out_dir)
+                print(f'The directory/folder {out_dir} was created')
+    else :
+        print("The list of qualified loans WILL NOT be saved")
+            
+    full_path = os.path.join(out_dir,file_name)
+            
+    qualy_loans_header = ["Lender","Max Loan Amount","Max LTV","Max DTI","Min Credit Score","Int Rate"]
+
+    Path(file_name) #this is the file name to be written to/created per the users input in the CTI
+    with open(full_path, 'w', newline='') as csvfile: #the 'w' indicates we are writing to the file, newlins is to manage especial characters
+        csvwriter = csv.writer(csvfile) #csvwriter is the writing function from the csv library imported at the begining
+        # Write our header row first
+        csvwriter.writerow(qualy_loans_header)
+        # Then we can write the list to the file
+            # for row in bank_data_filtered :
+        csvwriter.writerows(qualifying_loans)
+
+    print(f"The file {file_name} was saved in the directory/folder:{out_dir}")
 
 
 def run():
