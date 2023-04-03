@@ -57,17 +57,20 @@ The repository consists of the following folders, subfolders and contents as des
         file_save.py : includes stand alone logic to save the cvs file to the location provided by the user
     6. 2.Loan_Qualifier_user_stories.txt : User stories and pass criteria for translate requirements onto the code in the solution
     7. README.md - The file containing this present document
-    8. app.py : This is the main Phyton program containing the code the user will run to operate the solution 
+    8. app.py : This is the main Phyton program containing the code the user will run to operate the solution <==
+    9. terminal_history.txt : text file with the log of the 50 most recent commands executed in the terminal
 
 ## User Instructions
 From the Git Bash terminal (Windows), navigate to the directory where the Github repository is cloned
-
+![path](https://github.com/LUTOV001/2.Loan-Qualifyer/blob/main/images/terminal_github_repo.jpg)
 ```
 
 
 ### Credits
 
-In this section, list all the people who contribute to this project. You might want recruiters or potential collaborators to reach you, so include your contact email and, optionally, your LinkedIn or Twitter profile.
+Prepared by Luis Torres 
+LUTOV001@gmail.com
+April 2023
 
 ---
 
