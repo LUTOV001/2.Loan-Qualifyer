@@ -61,10 +61,38 @@ The repository consists of the following folders, subfolders and contents as des
     9. terminal_history.txt : text file with the log of the 50 most recent commands executed in the terminal
 
 ## User Instructions
-From the Git Bash terminal (Windows), navigate to the directory where the Github repository is cloned
-![path](https://github.com/LUTOV001/2.Loan-Qualifyer/blob/main/images/terminal_github_repo.jpg)
+#### 1.From the Git Bash terminal (Windows), navigate to the directory where the Github repository is cloned
+#### 2.Run the main app.py program
+```python 
+python app.py
 ```
+#### 3. Provide the path for the file where the lender criteria is: **./data/daily_rate_sheet.csv**
+#### 4. Enter the customer provided data, press enter after each value:
+1. What's you credit score? *750*
+2. What's your monthly debt? *200*
+3. What's yout monthly income? *4000*
+4. What's your desired loan amount? *100000*
+5. What's your home value? *210000*
 
+![cti](https://github.com/LUTOV001/2.Loan-Qualifyer/blob/main/images/cti_data_input.jpg)
+
+*Note:* The program will calculate DTR and LTV and the number of qualifie loans found:
+"The monthly debt to income ratio is: 0.05"
+"The loan to value ratio is : 0.48"
+"Found *15* qualifying loans"
+#### 5. Answer the question whether you want to save the file or not
+"Do you want to save the list of qualified loans? (Yes/No)"
+If you answer anything different than *Yes* the program terminates and displays the message "The list of qualified loans WILL NOT be saved".
+
+If you answer "Yes", the progam prompts for a directory : "Enter the directory/folder where you wnat to save the file".
+
+You can specify an existing folder or a new one:
+
+The system then asks for a file name: "Enter a file name with extension .csv".
+And finally the system provides 2 or 1 message(s) depending on whether the folder is new or existing.
+
+1. If you selected a new folder for the file: The folder <folder_name>  was created"
+2. The file <file_name.csv> was saved in the directory/folder <folder_name>
 
 ### Credits
 
