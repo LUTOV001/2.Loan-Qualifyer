@@ -1,0 +1,50 @@
+  114  python cticsv.py
+  115  python cticsv.py
+  116  ls
+  117  python app.py
+  118  python app.py
+  119  python app.py
+  120  python app.py
+  121  python app.py
+  122  python app.py
+  123  python app.py
+  124  cd ..
+  125  cd ..
+  126  cd ..
+  127  ls
+  128  cd Dashboard/
+  129  ls
+  130  cd 02.financeapps_python/
+  131  ls
+  132  cd 0236_questionary_for_loan_qualy/
+  133  ls
+  134  cd solved
+  135  ls
+  136  python app.py
+  137  cd ..
+  138  cd ..
+  139  cd ..
+  140  cd ..
+  141  cd github_connect/
+  142  ls
+  143  cd 2.Loan-Qualifyer/
+  144  cd 2.Loan-Qualifyer/
+  145  ls
+  146  python app.py
+  147  python app.py
+  148  python app.py
+  149  python app.py
+  150  python version
+  151  python --version
+  152  git --version
+  153  git ls
+  154  ls
+  155  git add .
+  156  git commit -m "final code push"
+  157  git push
+  158  git add ..
+  159  git status
+  160  git add .
+  161  git commit -m "read me plus images"
+  162  git push
+  163  history 50 > terminal_history.txt
